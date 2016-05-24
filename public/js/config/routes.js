@@ -6,6 +6,10 @@
 
   function MainRouter($stateProvider, $urlRouterProvider) {
     $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: 'home.html'
+    })
       .state('eventList', {
         url: '/events/list',
         templateUrl: "js/events/event-list.html",

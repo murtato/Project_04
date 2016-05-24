@@ -29,7 +29,7 @@
           function(decodedToken) {
             console.log("success")
             $log.info('Logged in!', decodedToken);
-            $state.go('eventList');
+            $state.go('home');
           },
           // on error
           function(err) {
@@ -46,7 +46,7 @@
           // on success
           function(decodedToken) {
             $log.info('Logged in!', decodedToken);
-            $state.go('eventList');
+            $state.go('home');
           },
           // on error
           function(err) {
