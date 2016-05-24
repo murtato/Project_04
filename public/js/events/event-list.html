@@ -1,0 +1,10 @@
+Event List Template
+<a ui-sref="showNew">Add a new event</a>
+<div ng-repeat="event in showListVm.shows">
+  <p>{{event.title}}</p>
+  <p>{{event.length}}</p>
+  <p>{{event.source}}</p>
+  <a ui-sref="eventShow({id: event._id})">See This Event</a>
+  <a ng-click="eventListVm.destroy(event)">This Event Sucks!</a>
+  <hr>
+</div>

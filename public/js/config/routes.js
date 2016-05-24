@@ -6,33 +6,29 @@
 
   function MainRouter($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'home.html'
+      .state('eventList', {
+        url: '/events/list',
+        templateUrl: "js/events/event-list.html",
+        controller: 'EventListController',
+        controllerAs: 'eventListVm'
       })
-      .state('showList', {
-        url: '/shows/list',
-        templateUrl: "js/shows/show-list.html",
-        controller: 'ShowListController',
-        controllerAs: 'showListVm'
+      .state('eventShow', {
+        url: '/events/show/:id',
+        templateUrl: 'js/events/event-show.html',
+        controller: 'EventShowController',
+        controllerAs: 'eventShowVm'
       })
-      .state('showShow', {
-        url: '/shows/show/:id',
-        templateUrl: 'js/shows/show-show.html',
-        controller: 'ShowShowController',
-        controllerAs: 'showShowVm'
+      .state('eventNew', {
+        url: '/events/new',
+        templateUrl: 'js/events/event-new.html',
+        controller: 'EventNewController',
+        controllerAs: 'eventNewVm'
       })
-      .state('showNew', {
-        url: '/shows/new',
-        templateUrl: 'js/shows/show-new.html',
-        controller: 'ShowNewController',
-        controllerAs: 'showNewVm'
-      })
-      .state('showEdit', {
-        url: '/shows/edit/:id',
-        templateUrl: 'js/shows/show-edit.html',
-        controller: 'ShowEditController',
-        controllerAs: 'showEditVm'
+      .state('eventEdit', {
+        url: '/events/edit/:id',
+        templateUrl: 'js/events/event-edit.html',
+        controller: 'EventEditController',
+        controllerAs: 'eventEditVm'
       })
       .state("signin", {
         url:          "/signin",

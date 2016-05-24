@@ -28,7 +28,7 @@ router.route('/token')
 
 // GET home page
 router.get('/', function(req, res, next) {
-  res.sendfile('public/index.html');
+  res.redirect('index.html');
 });
 
 router.get('*', function(req, res, next) {

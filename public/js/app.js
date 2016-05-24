@@ -1,19 +1,6 @@
-angular
-  .module('refugeeApp', ['ui.router'])
-  .config(MainRouter);
+(function() {
 
-MainRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
-function MainRouter ($stateProvider, $urlRouterProvider) {
-  $stateProvider
-    .state('home', {
-      url: "/",
-      templateUrl: "home.html",
-    });
-    .state('archive', {
-      url: "/archive",
-      templateUrl: "archive.html",
-    });
+  angular
+    .module('refugeeApp', ['ui.router'])
 
-    $urlRouterProvider.otherwise('/');
-}
-
+})()
