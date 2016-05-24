@@ -2,7 +2,7 @@
   angular.module('refugeeApp')
     .controller("EventListController", EventListController)
     .controller("EventShowController", EventShowController)
-    .controller("EventNewController", EventNewController)
+    .controller("EventNewController",  EventNewController)
     .controller("EventEditController", EventEditController);
 
     EventListController.$inject = ['EventResource'];
@@ -32,7 +32,6 @@
     function EventShowController(EventResource, $stateParams) {
       var vm = this;
       vm.show = {};
-      console.log(vm.show);
 
       EventResource.get({id: $stateParams.id}).$promise.then(function(jsonEvent) {
           vm.show = jsonEvent;
@@ -47,24 +46,24 @@
       function addEvent() {
         EventResource.save(vm.newEvent).$promise.then(function(jsonEvent) {
           vm.newEvent = {};
-          $state.go('eventShow', {id: jsonShow._id});
+          $state.go('eventShow', {id: jsonEvent._id});
         });
       }
     }
 
     function EventEditController(EventResource, $stateParams, $state) {
       var vm = this;
-      vm.show = {};
+      vm.event = {};
       vm.editEvent = editEvent;
 
-      EventResource.get({id: $stateParams.id}).$promise.then(function(jsonShow) {
-          vm.show = jsonShow;
+      EventResource.get({id: $stateParams.id}).$promise.then(function(jsonEvent) {
+          vm.event = jsonEvent;
       });
 
       function editEvent() {
-        EventResource.update({id: vm.show._id}, vm.show).$promise.then(function(updatedEvent) {
-          vm.show = updatedEvent;
-          $state.go('showShow', {id: updatedEvent._id});
+        EventResource.update({id: vm.event._id}, vm.event).$promise.then(function(updatedEvent) {
+          vm.event = updatedEvent;
+          $state.go('eventShow', {id: updatedEvent._id});
         });
       }
     }

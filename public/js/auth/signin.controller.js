@@ -27,8 +27,9 @@
         .then(
           // on success
           function(decodedToken) {
+            console.log("success")
             $log.info('Logged in!', decodedToken);
-            $state.go('showList');
+            $state.go('eventList');
           },
           // on error
           function(err) {
@@ -45,7 +46,7 @@
           // on success
           function(decodedToken) {
             $log.info('Logged in!', decodedToken);
-            $state.go('showList');
+            $state.go('eventList');
           },
           // on error
           function(err) {

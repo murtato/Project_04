@@ -1,6 +1,6 @@
 <div class="sign-in-form" ng-hide="vm.toggleValue">
   <h1>Sign In</h1>
-
+<!-- sign-in form -->
   <form ng-submit="vm.submitLogIn();" name="signInForm" novalidate>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
@@ -19,8 +19,8 @@
       <a class="underline" ng-click="vm.toggleValue = !vm.toggleValue;"><u>Sign Up</u></a>.
     </strong>
   </p>
-</div> <!-- sign-in-form -->
-
+</div>
+<!-- sign-up form -->
 <div class="sign-up-form" ng-show="vm.toggleValue">
   <h1>Sign Up</h1>
 
@@ -56,4 +56,4 @@
     If you can't remember your password,
     <a class="underline"><u>request a new one</u>.</a>
   </p>
-</div> <!-- sign-up-form -->
+</div>
