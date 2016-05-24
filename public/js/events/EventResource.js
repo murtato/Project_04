@@ -6,7 +6,7 @@
 
   function EventResource($resource) {
     return $resource(
-      "/api/events/:id",
+      "/events/:id",
       {id: '@id'}, {
         'update': { method: 'PUT'}
       }
