@@ -14,7 +14,8 @@ module.exports = {
 // changes to what your token looks like here.
 function extractPayload(user, options) {
  return {
-  _id: agency._id,
+  _id: user._id,
+  email: user.email,
   use: ['events']
  };
 }
@@ -47,6 +48,7 @@ function create(req, res, next) {
  User
    .findOne({email: req.body.email}).exec()
    .then(function(user) {
+    console.log(user)
      if (!user || !user.verifyPasswordSync(req.body.password)) {
        var message = 'User not found or password incorrect.';
        return res.status(403).json(message);

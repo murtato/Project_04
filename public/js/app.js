@@ -1,6 +1,6 @@
 (function() {
 
   angular
-    .module('refugeeApp', ['ui.router'])
+    .module('refugeeApp', ['ui.router', 'ngResource'])
 
 })()

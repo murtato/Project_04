@@ -1,4 +1,4 @@
-var mongoose = require('mongoose')
+var mongoose = require('mongoose'),
     debug    = require('debug')('app:models')
 
 var agencySchema = mongoose.Schema({
