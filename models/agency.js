@@ -3,7 +3,11 @@ var mongoose = require('mongoose'),
 
 var agencySchema = mongoose.Schema({
   name: {type: String, required: true, unique: true },
+  role: String, default: volunteer
+  role: String, default: agent,
   email: {type: String, required: true, unique: true },
+  type: { type: String, required: true },
+  password: { type: String, required: true, bcrypt: true }
   address: String
 });
 
