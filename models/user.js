@@ -5,8 +5,9 @@ var userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   type: { type: String, required: true },
-  role: String, default: volunteer,
-  role: String, default: agent,
+  admin: { type: Boolean, required: true, default: false },
+  // role: {type: String, default: "volunteer"},
+  // role: {type: String, default: "agent"},
   password: { type: String, required: true, bcrypt: true }
 });
 

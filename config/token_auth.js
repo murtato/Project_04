@@ -3,9 +3,10 @@ var jwt = require('jsonwebtoken');
 var User = require('../models/user');
 
 module.exports = {
- create:       create,
- refresh:      refresh,
- authenticate: authenticate
+ create:        create,
+ refresh:       refresh,
+ authenticate:  authenticate,
+ areYouAdmin:   areYouAdmin
 };
 
 // ************************** TOKEN STRUCTURE **************************
@@ -16,6 +17,7 @@ function extractPayload(user, options) {
  return {
   _id: user._id,
   email: user.email,
+  admin: user.admin,
   use: ['events']
  };
 }
@@ -53,7 +55,7 @@ function create(req, res, next) {
        var message = 'User not found or password incorrect.';
        return res.status(403).json(message);
      }
-
+// insert if else logic for volunteers and agencies?
      var token = generateJwt(user);
 
      res.json(token);
@@ -95,6 +97,12 @@ function authenticate(req, res, next) {
    req.decoded = decoded;
    next();
  });
+}
+
+function areYouAdmin(req, res, next) {
+  if(req.decoded.admin != admin) return next({status: 401, message: 'You do not have administrative credentials'})
+
+    next();
 }
 
 // ****************************** HELPERS ******************************

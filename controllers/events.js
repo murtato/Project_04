@@ -28,6 +28,7 @@ function show(req, res, next) {
 
 function create(req, res, next){
   var newEvent = new Event(req.body);
+  console.log("hello posting", req.body)
 
   newEvent.save(function(err, savedEvent) {
     if (err) next (err);

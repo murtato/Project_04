@@ -1,10 +1,10 @@
-Event List Template
+See all these upcoming events!
 <a ui-sref="eventNew">Add a new event</a>
 <div ng-repeat="event in eventListVm.events">
   <p>{{event.title}}</p>
   <p>{{event.description}}</p>
   <p>{{event.organization}}</p>
   <a ui-sref="eventShow({id: event._id})">See This Event!</a>
-  <a ng-click="eventListVm.destroy(event)">The event ended already.</a>
+  <a ng-click="eventListVm.destroy(event)">This event ended already.</a>
   <hr>
 </div>

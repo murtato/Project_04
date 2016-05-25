@@ -35,6 +35,7 @@
 
       EventResource.get({id: $stateParams.id}).$promise.then(function(jsonEvent) {
           vm.show = jsonEvent;
+          console.log("yo", vm.show)
       });
     }
 
@@ -46,7 +47,7 @@
       function addEvent() {
         EventResource.save(vm.newEvent).$promise.then(function(jsonEvent) {
           vm.newEvent = {};
-          $state.go('eventShow', {id: jsonEvent._id});
+          $state.go('eventShow', {id: jsonEvent._id, event: jsonEvent});
         });
       }
     }

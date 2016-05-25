@@ -3,12 +3,11 @@ var mongoose = require('mongoose'),
 
 var agencySchema = mongoose.Schema({
   name: {type: String, required: true, unique: true },
-  role: String, default: volunteer
-  role: String, default: agent,
   email: {type: String, required: true, unique: true },
   type: { type: String, required: true },
-  password: { type: String, required: true, bcrypt: true }
-  address: String
+  password: { type: String, required: true, bcrypt: true },
+  address: String,
+  agent: {type: mongoose.Schema.ObjectId, ref: User}
 });
 
 // add bcrypt hashing to model (works on a password field)!
