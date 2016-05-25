@@ -100,7 +100,7 @@ function authenticate(req, res, next) {
 }
 
 function areYouAdmin(req, res, next) {
-  if(req.decoded.admin != admin) return next({status: 401, message: 'You do not have administrative credentials'})
+  if(req.decoded.admin) return next({status: 401, message: 'You do not have administrative credentials'})
 
     next();
 }
