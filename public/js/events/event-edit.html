@@ -1,12 +1,12 @@
 <div>
-  <h3>Edit Event(Cause I Don't Like The One Listed)</h3>
+  <h3>Edit Event</h3>
   <form id='edit-event' ng-submit="eventEditVm.editEvent()">
     <div>
       <label for="title">Title:</label>
       <input type="text" name="title" ng-model="eventEditVm.event.title">
     </div>
     <div>
-      <label for="description">Description:</label>
+      <label for="description">Description:</label><br>
       <textarea name="description" ng-model="eventEditVm.event.description" cols=40 rows=6></textarea>
     </div>
     <div>
