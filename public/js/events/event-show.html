@@ -3,5 +3,5 @@
 <p>Description: {{eventShowVm.show.description}}</p>
 <p>Organization: {{eventShowVm.show.organization}}</p>
 <a  ui-sref="eventEdit({id:eventShowVm.show._id})" ng-hide="vm.authService.isLoggedIn()">Edit Event</a>
-<button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
-<button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
+<!-- <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button> -->
+<!-- <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button> -->

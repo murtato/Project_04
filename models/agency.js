@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 var agencySchema = mongoose.Schema({
   name: {type: String, required: true, unique: true },
   email: {type: String, required: true, unique: true },
-  type: { type: String, required: true },
+  // type: { type: String, required: true },
   password: { type: String, required: true, bcrypt: true },
   address: String,
   agent: {type: mongoose.Schema.ObjectId, ref: User}

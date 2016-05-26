@@ -2,11 +2,10 @@
 <h4>A nonprofit and volunteer networking hub</h4>
 <h4>centered on refugee resettlement efforts</h4>
 <a ui-sref="eventList">See all events that agencies have posted!</a>
-<!-- <div ng-repeat="event in eventListVm.events">
-  <p>{{event.title}}</p>
-  <p>{{event.description}}</p>
-  <p>{{event.organization}}</p>
+<div ng-repeat="event in eventListVm.events">
+  <p>Title: {{event.title}}</p>
+  <p>Description: {{event.description}}</p>
+  <p>Organization: {{event.organization}}</p>
   <a ui-sref="eventShow({id: event._id})">More event details</a>
   <hr>
 </div>
- -->
