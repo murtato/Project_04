@@ -1,2 +1,9 @@
 <p>Welcome to the Refugee Connector</p>
 <a ui-sref="eventList">See all events that agencies have posted!</a>
+<div ng-repeat="event in eventListVm.events">
+  <p>{{event.title}}</p>
+  <p>{{event.description}}</p>
+  <p>{{event.organization}}</p>
+  <a ui-sref="eventShow({id: event._id})">More event details</a>
+  <hr>
+</div>

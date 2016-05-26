@@ -32,7 +32,7 @@ function create(req, res, next){
 
   newEvent.save(function(err, savedEvent) {
     if (err) next (err);
-
+    console.log(savedEvent);
     res.json(savedEvent);
   });
 

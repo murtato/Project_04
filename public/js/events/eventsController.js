@@ -16,7 +16,8 @@
       vm.destroy = destroy;
 
       EventResource.query().$promise.then(function(events) {
-        vm.events = events;
+        console.log(events)
+        vm.events.push(events);
       });
 
       function destroy(eventToDelete) {
