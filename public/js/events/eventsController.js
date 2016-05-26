@@ -5,15 +5,16 @@
     .controller("EventNewController",  EventNewController)
     .controller("EventEditController", EventEditController);
 
-    EventListController.$inject = ['EventResource'];
+    EventListController.$inject = ['EventResource', 'authService'];
     EventShowController.$inject = ['EventResource', '$stateParams'];
     EventNewController.$inject = ['EventResource', '$state'];
     EventEditController.$inject = ['EventResource', '$stateParams', '$state'];
 
-    function EventListController(EventResource) {
+    function EventListController(EventResource, authService) {
       var vm = this;
       vm.events = [];
       vm.destroy = destroy;
+      vm.authService = authService;
 
       // EventResource.query().$promise.then(function(events) {
       //   vm.events = events;
@@ -21,6 +22,7 @@
       //   console.log(vm.events)
       // });
       EventResource.query(function(events){
+        console.log(events)
         vm.events = events;
       })
 

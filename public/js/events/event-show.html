@@ -5,6 +5,7 @@
 <div class="address">Address: {{eventShowVm.show.address}}</div>
 <div class="city">City: {{eventShowVm.show.city}}</div>
 <div class="state">State: {{eventShowVm.show.state}}</div>
+<div class="zip">Postal Code: {{eventShowVm.show.zip}}</div>
 <a  ui-sref="eventEdit({id:eventShowVm.show._id})" ng-hide="vm.authService.isLoggedIn()">Edit Event</a>
 <!-- <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button> -->
 <!-- <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button> -->
