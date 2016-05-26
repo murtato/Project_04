@@ -3,9 +3,12 @@
 <a ui-sref="eventNew">Add a new event</a>
 <hr>
 <div ng-repeat="event in eventListVm.events">
-  <p>Title: {{event.title}}</p>
-  <p>Description: {{event.description}}</p>
-  <p>Organization: {{event.organization}}</p>
+<div class="title">Title: {{event.title}}</div>
+<div class="desc">Description: {{event.description}}</div>
+<div class="org">Organization: {{event.organization}}</div>
+<div class="address">Address: {{event.address}}</div>
+<div class="city">City: {{event.city}}</div>
+<div class="state">State: {{event.state}}</div>
   <a ui-sref="eventShow({id: event._id})">More event details</a>
   <hr>
 </div>

@@ -14,3 +14,7 @@ body {
 a {
   color: #00B7FF;
 }
+
+.statebox {
+  width: 40px;
+}

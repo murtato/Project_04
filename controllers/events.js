@@ -46,6 +46,11 @@ function update(req, res, next) {
 
     event.title = req.body.title;
     event.description = req.body.description;
+    event.organization = req.body.organization;
+    event.address = req.body.address;
+    event.city = req.body.city;
+    event.state = req.body.state;
+    event.zip = req.body.zip;
 
     event.save (function(err, updatedEvent) {
       if(err) next(err);
