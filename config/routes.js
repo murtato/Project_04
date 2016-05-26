@@ -9,7 +9,7 @@ var token = require('../config/token_auth');
 
 
 router.route('/events')
-  .get(eventsController.show)
+  .get(eventsController.index)
   .post(eventsController.create);
 
 router.route('/events/:id')

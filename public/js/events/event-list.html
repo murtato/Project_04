@@ -1,10 +1,11 @@
-See all these upcoming events!
+<h2>See all these upcoming events!</h2>
+<hr>
 <a ui-sref="eventNew">Add a new event</a>
+<hr>
 <div ng-repeat="event in eventListVm.events">
-  <p>{{event.title}}</p>
-  <p>{{event.description}}</p>
-  <p>{{event.organization}}</p>
-  <a ui-sref="eventShow({id: event._id})">See This Event!</a>
-  <a ng-click="eventListVm.destroy(event)">This event ended already.</a>
+  <p>Title: {{event.title}}</p>
+  <p>Description: {{event.description}}</p>
+  <p>Organization: {{event.organization}}</p>
+  <a ui-sref="eventShow({id: event._id})">More event details</a>
   <hr>
 </div>

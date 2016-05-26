@@ -15,10 +15,14 @@
       vm.events = [];
       vm.destroy = destroy;
 
-      EventResource.query().$promise.then(function(events) {
-        console.log(events)
-        vm.events.push(events);
-      });
+      // EventResource.query().$promise.then(function(events) {
+      //   vm.events = events;
+      //   console.log(events)
+      //   console.log(vm.events)
+      // });
+      EventResource.query(function(events){
+        vm.events = events;
+      })
 
       function destroy(eventToDelete) {
         EventResource.delete({id: eventToDelete._id}).$promise.then(function (response) {
