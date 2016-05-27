@@ -34,8 +34,7 @@ function create(req, res, next){
     if (err) next (err);
     console.log(savedEvent);
     res.json(savedEvent);
-  }).then(User.findById({}));
-  ;
+  });
 
 }
 
