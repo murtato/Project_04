@@ -85,5 +85,5 @@ function destroy(req, res, next) {
     if(err) next(err);
 
     res.json({message: 'Event successfully deleted'});
-  });
+  })/*.select('-__v')*/;
 }
