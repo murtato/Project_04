@@ -1,35 +1,15 @@
-<h3>Check out any of these upcoming events!</h3>
+<h3 class="listheader">Check out any of these upcoming events!</h3>
 <hr>
 <!-- <a ui-sref="eventNew">Add a new event</a> -->
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th ng-click="vm.sortBy = 'name'; vm.descending = !vm.descending">Name</th>
-      <th ng-click="vm.sortBy = 'city'; vm.descending = !vm.descending">City</th>
-      <th ng-click="vm.sortBy = 'bio'; vm.descending = !vm.descending">Bio</th>
-      <th ng-click="vm.sortBy = 'date'; vm.descending = !vm.descending">Client Date</th>
-      <th ng-click="vm.sortBy = 'funds'; vm.descending = !vm.descending" class="text-right">Funds</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="client in vm.clients | filter:{city: vm.selectedCity} | filter:vm.search | orderBy: vm.sortBy:vm.descending | limitTo: vm.limit">
-      <td>{{client.name | lastName }}</td>
-      <td>{{client.city | uppercase}}</td>
-      <td>{{client.bio | ellipsis:vm.trimSize()}}</td>
-      <td>{{client.date | date:'MM/dd/yyyy' }}</td>
-      <td class="text-right">{{client.funds | currency: "$":0 }}</td>
-    </tr>
-  </tbody>
-</table>
 
-<div ng-repeat="event in eventListVm.events">
-<div class="title">Title: {{event.title}}</div>
-<div class="desc">Description: {{event.description}}</div>
-<div class="org">Organization: {{event.organization}}</div>
-<div class="address">Address: {{event.address}}</div>
-<div class="city">City: {{event.city}}</div>
-<div class="state">State: {{event.state}}</div>
-<div class="zip">Postal Code: {{event.zip}}</div>
+<div class="eventslisted" ng-repeat="event in eventListVm.events">
+  <div id="title">Title: <br> {{event.title}}</div>
+  <div id="desc">Description: <br> {{event.description}}</div>
+  <div id="org">Organization: <br> {{event.organization}}</div>
+  <div id="address">Address: <br> {{event.address}}</div>
+  <div id="city">City: {{event.city}}</div>
+  <div id="state">State: {{event.state}}</div>
+  <div id="zip">Postal Code: {{event.zip}}</div>
   <a ui-sref="eventShow({id: event._id})">More event details</a>
   <hr>
 </div>

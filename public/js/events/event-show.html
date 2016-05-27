@@ -1,11 +1,14 @@
-<h2>Events Page</h2>
-<div class="title">Title: {{eventShowVm.show.title}}</div>
-<div class="desc">Description: {{eventShowVm.show.description}}</div>
-<div class="org">Organization: {{eventShowVm.show.organization}}</div>
-<div class="address">Address: {{eventShowVm.show.address}}</div>
-<div class="city">City: {{eventShowVm.show.city}}</div>
-<div class="state">State: {{eventShowVm.show.state}}</div>
-<div class="zip">Postal Code: {{eventShowVm.show.zip}}</div>
-<a  ui-sref="eventEdit({id:eventShowVm.show._id})" ng-hide="vm.authService.isLoggedIn()">Edit Event</a>
+<h2 class="showpage">Events Page</h2>
+
+<div class="eventdescr">
+  <div id="title">Title: {{eventShowVm.show.title}}</div>
+  <div id="desc">Description: {{eventShowVm.show.description}}</div>
+  <div id="org">Organization: {{eventShowVm.show.organization}}</div>
+  <div id="address">Address: {{eventShowVm.show.address}}</div>
+  <div id="city">City: {{eventShowVm.show.city}}</div>
+  <div id="state">State: {{eventShowVm.show.state}}</div>
+  <div id="zip">Postal Code: {{eventShowVm.show.zip}}</div>
+  <a  ui-sref="eventEdit({id:eventShowVm.show._id})" ng-hide="vm.authService.isLoggedIn()">Edit Event</a>
+</div>
 <!-- <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button> -->
 <!-- <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button> -->
