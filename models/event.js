@@ -7,7 +7,11 @@ var eventSchema = mongoose.Schema({
   address: String,
   city: String,
   state: String,
-  zip: String
+  zip: String,
+  postedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }
 })
 
 var Event = mongoose.model('Event', eventSchema)

@@ -9,6 +9,7 @@ var userSchema = new mongoose.Schema({
   // role: {type: String, default: "volunteer"},
   // role: {type: String, default: "agent"},
   password: { type: String, required: true, bcrypt: true }
+  // reference: {type: [{Event: event_id}]}
 });
 
 // add bcrypt hashing to model (works on a password field)!

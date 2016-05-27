@@ -1,14 +1,25 @@
-.navbar-fixed-top{
+.navbar-fixed-top {
   color: black;
   background-color:#3BFF6C;
   border: solid black;
 }
 
-
+.eventlistlink {
+  margin:  12px 40px 0px 30px;
+  /*padding: 10px 40px 0px 30px;*/
+  font-size: 17px;
+  position: absolute;
+}
 
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.navbar-btn {
+  float: right;
+  padding: 5px 10px 5px 10px;
+  font-size: 17px;
 }
 
 a {
@@ -17,4 +28,8 @@ a {
 
 .statebox {
   width: 40px;
+}
+
+.form-control {
+  width: 50px;
 }

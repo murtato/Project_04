@@ -6,7 +6,7 @@ module.exports = {
  create:        create,
  refresh:       refresh,
  authenticate:  authenticate,
- areYouAdmin:   areYouAdmin
+ isThisYou:     isThisYou
 };
 
 // ************************** TOKEN STRUCTURE **************************
@@ -99,8 +99,8 @@ function authenticate(req, res, next) {
  });
 }
 
-function areYouAdmin(req, res, next) {
-  if(req.decoded.admin) return next({status: 401, message: 'You do not have administrative credentials'})
+function isThisYou(req, res, next) {
+  if(!req.decoded.user._id) return next({status: 401, message: 'This is not your post'})
 
     next();
 }
