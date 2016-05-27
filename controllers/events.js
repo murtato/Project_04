@@ -29,14 +29,32 @@ function show(req, res, next) {
 function create(req, res, next){
   var newEvent = new Event(req.body);
   console.log("hello posting", req.body)
-
   newEvent.save(function(err, savedEvent) {
     if (err) next (err);
     console.log(savedEvent);
     res.json(savedEvent);
-  });
+  })
 
-}
+  Event
+  .create(req.body)
+  .then(function(event){
+    res.json({
+      success: true,
+      message: "Event successfully created.",
+      data: {
+        email: user.email,
+        id:    user._id
+      }
+    })
+  }).catch(function(err) {
+    if (err.message.match(/E11000/)){
+      err.status = 409;
+    } else {
+      err.status = 422;
+    }
+    next(err);
+  }); //will return error until userId is fully ref'd
+};
 
 function update(req, res, next) {
   var id = req.params.id;

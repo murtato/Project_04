@@ -4,6 +4,18 @@
   border: solid black;
 }
 
+.welcometext {
+  text-align: center;
+ /*color: black;*/
+ /*background-color:#3BFF6C;*/
+ /*border: solid black;*/
+}
+
+.bodytext {
+  text-align: center;
+  /*border: solid black;*/
+}
+
 .eventlistlink {
   margin:  12px 40px 0px 30px;
   /*padding: 10px 40px 0px 30px;*/
@@ -11,10 +23,13 @@
   position: absolute;
 }
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.addeventlink {
+ margin:  12px 40px 0px 160px;
+ /*padding: 10px 40px 0px 30px;*/
+ font-size: 17px;
+ position: absolute;
 }
+
 
 .navbar-btn {
   float: right;
@@ -24,6 +39,12 @@ body {
 
 a {
   color: #00B7FF;
+}
+
+.bodyc {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #9DFF8A;
 }
 
 .statebox {

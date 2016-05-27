@@ -12,18 +12,21 @@
     <script src="js/myFilters-module.js"></script>
 
   </head>
-  <body>
+  <body class="bodyc">
     <header ng-controller="NavbarController as vm">
       <nav class="navbar-fixed-top">
         <div class="container">
-          <a ui-sref="home" class="navbar-brand">Home</a>
-          <a ui-sref="eventList" class="eventlistlink" ng-show="vm.authService.isLoggedIn()">Volunteer!</a>
+          <a ui-sref="home" class="navbar-brand">HOME</a>
+          <a ui-sref="eventList" class="eventlistlink" ng-show="vm.authService.isLoggedIn()">VOLUNTEER</a>
+          <a ui-sref="eventNew" class="addeventlink" ng-show="vm.authService.isLoggedIn()">POST</a>
           <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="navbar-btn">Sign in</button>
           <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="navbar-btn">Sign out</button>
         </div>
       </nav>
     </header>
     <div ui-view></div>
+
+
 
     <script src="js/app.js" charset="utf-8"></script>
     <script src="js/config/app.debug.js"></script>
