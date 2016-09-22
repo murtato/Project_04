@@ -13,33 +13,34 @@
 .snark{
   font-size: 8px;
 }
+
 .welcometext{
-  border: 5px dashed rgba(192,192,192,0.7);
+  border: 2px solid rgba(192,192,192,0.7);
   text-align: center;
   width: auto;
   background-color: rgba(102, 244, 102, 0.35);
 }
 
 .bodytext {
-  border: 5px dashed rgba(192,192,192,0.7);
+  border: 2px solid rgba(192,192,192,0.7);
   margin: 15px;
   text-align: center;
   background-color: rgba(102, 244, 102, 0.35);
 }
 
 .showpage {
-  border: 5px dashed rgba(192,192,192,0.7);
+  border: 2px solid rgba(192,192,192,0.7);
   text-align: center;
   background-color: rgba(102, 244, 102, 0.35);
 }
 
 .eventdescr {
-  border: 5px dashed rgba(192,192,192,0.7);
+  border: 2px solid rgba(192,192,192,0.7);
   background-color: rgba(102, 244, 102, 0.35);
 }
 
 .listheader {
-  border: 5px dashed rgba(192,192,192,0.7);
+  border: 2px solid rgba(192,192,192,0.7);
   text-align: center;
   background-color: rgba(102, 244, 102, 0.35);
 }
@@ -61,7 +62,7 @@ a {
 }
 
 .bodyc {
-  border: 5px dashed rgb(192,192,192);
+  border: 2px solid rgb(192,192,192);
   align-content: center;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -72,7 +73,7 @@ a {
 }
 
 div.eventslisted {
-  border: 5px dashed rgba(192,192,192,0.7);
+  border: 2px solid rgba(192,192,192,0.7);
   margin-bottom: 4px;
   background-color: rgba(102, 244, 102, 0.35)
 }
